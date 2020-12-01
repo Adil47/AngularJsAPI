@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script src="myscript.js"></script>
+
+</head>
+<body ng-app="StudentModule" ng-controller="StudentController">
+Name <input type="test" name=""  ng-model="Name"><br>
+Phone <input type="test" name="" ng-model="Phone"><br>
+Email <input type="test" name="" ng-model="Email"><br>
+ <input type="button" name="" value="Submit" ng-click="insertStudent(Name,Phone,Email)"><br>
+
+
+
+
+<table border="1">	
+
+	<tr>	
+		<th>	Id</th>
+		<th>	Name</th>
+		<th>	Phone</th>
+		<th>	Email</th>
+		<th>	Delete</th>
+		<th>	Edit</th>
+
+
+	</tr>
+		
+		<tr ng-repeat="std in Students">
+				<td>	{{std.StudentId}}</td>
+				<td>	{{std.Name}}</td>
+				<td>	{{std.Phone}}</td>
+				<td>	{{std.Email}}</td>
+				<td>
+					<img src="Image/delete.png" width="30" ng-click="deleteStudent(std.StudentId)" >
+				</td>
+				<td>
+					<img src="Image/edit.png"  width="30" >
+				</td>
+
+
+		</tr>
+
+
+
+</table>
+
+
+
+</body>
+</html>
